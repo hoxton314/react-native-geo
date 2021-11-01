@@ -19,7 +19,7 @@ export default class MyButton extends Component {
     }
 
     render() {
-        const styles = {
+        const styles = StyleSheet.create({
             text: {
                 textAlign: 'center',
                 fontWeight: 'bold',
@@ -33,7 +33,7 @@ export default class MyButton extends Component {
                 fontSize: this.state.fontsize,
                 height: 40,
             }
-        }
+        })
 
         return (
             <TouchableOpacity onPress={this.state.func}>

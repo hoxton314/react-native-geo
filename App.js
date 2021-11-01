@@ -5,7 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import ListScreen from "./components/ListScreen"
 import MainScreen from "./components/MainScreen"
-
+import MapScreen from './components/MapScreen';
 export default class App extends React.Component {
   constructor(props) {
     super(props);
@@ -21,6 +21,7 @@ export default class App extends React.Component {
         <Stack.Navigator>
           <Stack.Screen name="main" component={MainScreen} options={screenOpt.main} />
           <Stack.Screen name="list" component={ListScreen} options={screenOpt.list} />
+          <Stack.Screen name="map" component={MapScreen} options={screenOpt.map} initialParams={{ mapData: 'test'} }/>
         </Stack.Navigator>
       </NavigationContainer>
     );
@@ -38,6 +39,17 @@ const screenOpt = {
       fontWeight: 'bold',
     },
     //headerShown: false
+  },
+  map: {
+    title: 'Map',
+    headerStyle: {
+      backgroundColor: '#3f5ca8',
+    },
+    headerTintColor: '#ffffff',
+    headerTitleStyle: {
+      fontWeight: 'bold',
+    },
+    headerShown: true
   },
   main: {
     title: 'Register Node App',
