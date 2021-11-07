@@ -13,6 +13,7 @@ export default class App extends React.Component {
       data: '',
     }
   }
+
   render() {
     const Stack = createNativeStackNavigator();
 
@@ -21,7 +22,7 @@ export default class App extends React.Component {
         <Stack.Navigator>
           <Stack.Screen name="main" component={MainScreen} options={screenOpt.main} />
           <Stack.Screen name="list" component={ListScreen} options={screenOpt.list} />
-          <Stack.Screen name="map" component={MapScreen} options={screenOpt.map} initialParams={{ mapData: 'test'} }/>
+          <Stack.Screen name="map" component={MapScreen} options={screenOpt.map} initialParams={{ mapData: 'test' }} />
         </Stack.Navigator>
       </NavigationContainer>
     );
